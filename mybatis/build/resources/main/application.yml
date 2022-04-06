@@ -1,0 +1,20 @@
+
+spring:
+  profiles:
+    active: local
+
+---
+# local development server
+spring:
+  profiles: local
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/test
+    driver-class-name: org.postgresql.Driver
+    username: test
+    password: test
+  sql:
+    init:
+      schema-locations: classpath*:mybatis/initdata/schema.sql
+      data-locations: classpath*:mybatis/initdata/data.sql
+      mode: always
+

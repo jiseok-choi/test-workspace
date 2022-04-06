@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AwardTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AwardTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.jiseok.mybatis.awards.html">com.jiseok.mybatis.awards</a> &gt; AwardTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.572s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="awardInfo()"></a>
+<h3 class="failures">awardInfo()</h3>
+<span class="code">
+<pre>org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'name' from result set.  Cause: org.postgresql.util.PSQLException: Bad value for type int : 칸
+; Bad value for type int : 칸; nested exception is org.postgresql.util.PSQLException: Bad value for type int : 칸
+	at app//org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:104)
+	at app//org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at app//org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at app//org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at app//org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at app//org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at app//com.sun.proxy.$Proxy70.selectOne(Unknown Source)
+	at app//org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at app//org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at app//org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at app//org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at app//com.sun.proxy.$Proxy71.awardDetail(Unknown Source)
+	at app//com.jiseok.mybatis.awards.AwardTest.awardInfo(AwardTest.java:31)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.2/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@11.0.2/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@11.0.2/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.2/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.postgresql.util.PSQLException: Bad value for type int : 칸
+	at app//org.postgresql.jdbc.PgResultSet.toInt(PgResultSet.java:3167)
+	at app//org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
+	at app//org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
+	at app//com.zaxxer.hikari.pool.HikariProxyResultSet.getInt(HikariProxyResultSet.java)
+	at app//org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:37)
+	at app//org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:26)
+	at app//org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createUsingConstructor(DefaultResultSetHandler.java:711)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createByConstructorSignature(DefaultResultSetHandler.java:694)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:658)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:631)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:398)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at app//org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at app//org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at app//org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at app//org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at app//org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at app//org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at app//org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at app//org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.2/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 90 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">awardInfo()</td>
+<td class="failures">0.572s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>13:41:54.670 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:41:54.680 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:41:54.713 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.jiseok.mybatis.awards.AwardTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+13:41:54.731 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jiseok.mybatis.awards.AwardTest], using SpringBootContextLoader
+13:41:54.735 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jiseok.mybatis.awards.AwardTest]: class path resource [com/jiseok/mybatis/awards/AwardTest-context.xml] does not exist
+13:41:54.735 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jiseok.mybatis.awards.AwardTest]: class path resource [com/jiseok/mybatis/awards/AwardTestContext.groovy] does not exist
+13:41:54.736 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.jiseok.mybatis.awards.AwardTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:41:54.781 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.jiseok.mybatis.awards.AwardTest]
+13:41:54.906 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.jiseok.mybatis.awards.AwardTest]: using defaults.
+13:41:54.906 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+13:41:54.933 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2555fff0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@70d2e40b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@120f38e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7a0e1b5e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@702ed190, org.springframework.test.context.support.DirtiesContextTestExecutionListener@173b9122, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c18432b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7646731d, org.springframework.test.context.event.EventPublishingTestExecutionListener@70e29e14, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b1bb3ab, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5a4bef8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40bffbca, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2449cff7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@42a9a63e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62da83ed]
+13:41:54.936 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@c1fca1e testClass = AwardTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@241a53ef testClass = AwardTest, locations = '{}', classes = '{class com.jiseok.mybatis.AwardApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@b78a709, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@531c311e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b672daa, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@ed3068a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5b43fbf6, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@40f1be1b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@536dbea0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.6)
+
+2022-04-04 13:41:55.370  INFO 19916 --- [    Test worker] com.jiseok.mybatis.awards.AwardTest      : Starting AwardTest using Java 11.0.2 on DESKTOP-TBBLFPN with PID 19916 (started by chjs9 in C:\IdeaProjects\award)
+2022-04-04 13:41:55.371  INFO 19916 --- [    Test worker] com.jiseok.mybatis.awards.AwardTest      : The following 1 profile is active: &quot;local&quot;
+2022-04-04 13:41:55.407  WARN 19916 --- [    Test worker] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 9:13]
+2022-04-04 13:41:57.351  INFO 19916 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-04 13:41:57.665  INFO 19916 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-04 13:41:57.794  INFO 19916 --- [    Test worker] com.jiseok.mybatis.awards.AwardTest      : Started AwardTest in 2.817 seconds (JVM running for 5.569)
+2022-04-04 13:41:57.831  INFO 19916 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@c1fca1e testClass = AwardTest, testInstance = com.jiseok.mybatis.awards.AwardTest@45d7495e, testMethod = awardInfo@AwardTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@241a53ef testClass = AwardTest, locations = '{}', classes = '{class com.jiseok.mybatis.AwardApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@b78a709, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@531c311e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b672daa, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@ed3068a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5b43fbf6, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@40f1be1b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@536dbea0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@30517a57]; rollback [true]
+2022-04-04 13:41:58.383  INFO 19916 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@c1fca1e testClass = AwardTest, testInstance = com.jiseok.mybatis.awards.AwardTest@45d7495e, testMethod = awardInfo@AwardTest, testException = org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'name' from result set.  Cause: org.postgresql.util.PSQLException: Bad value for type int : 칸
+; Bad value for type int : 칸; nested exception is org.postgresql.util.PSQLException: Bad value for type int : 칸, mergedContextConfiguration = [WebMergedContextConfiguration@241a53ef testClass = AwardTest, locations = '{}', classes = '{class com.jiseok.mybatis.AwardApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@b78a709, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@531c311e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b672daa, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@ed3068a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5b43fbf6, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@40f1be1b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@536dbea0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2022. 4. 4. 오후 1:41:58</p>
+</div>
+</div>
+</body>
+</html>
